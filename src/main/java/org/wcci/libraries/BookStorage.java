@@ -1,5 +1,8 @@
 package org.wcci.libraries;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class BookStorage {
     private BookRepository bookRepo;
 

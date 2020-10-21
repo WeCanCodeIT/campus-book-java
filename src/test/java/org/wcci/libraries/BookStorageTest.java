@@ -25,13 +25,13 @@ public class BookStorageTest {
     }
     @Test
     public void bookStorageShouldRetrieveBookWithId(){
-        //Arrangement
+
         BookRepository bookRepo = mock(BookRepository.class);
         BookStorage underTest = new BookStorage(bookRepo);
         Book mockBook = mock(Book.class);
         when(bookRepo.findById(1L)).thenReturn(Optional.of(mockBook));
 
-//         action
+
         Book retrievedBook = underTest.retrieveBookById(1L);
 
         assertThat(retrievedBook).isEqualTo(mockBook);
